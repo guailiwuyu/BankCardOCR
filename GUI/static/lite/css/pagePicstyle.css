@@ -1,0 +1,102 @@
+@charset "utf-8";
+html {
+	font-weight:normal;
+	position: relative;
+	height: 100%;	
+}
+
+a {
+	text-decoration: none;
+}
+img {
+	border-style: none;
+}
+ul{list-style: none;}
+/* 基础部分*/
+body {
+	position: relative;
+	height: 100%;	
+	padding: 0;
+	margin: 0 auto;
+	font-family: "Microsoft Yahei";
+}
+
+/*图片列表*/
+.piclist{width: 680px; margin: 0 auto;background-color: #fff;}
+.listul{margin-left: 0;padding-left: 40px; overflow:hidden;height: 400px;}
+.listul li{float: left;width: 195px;height: 210px;position: relative;}
+.listul li span{position: absolute;bottom: 30px;width: 160px;text-align: center;background: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); color: #fff;font-size: 15px;padding: 3px 0;}
+
+/*分页样式*/
+.fydiv{width: 450px;text-align: center;height: 30px;margin: 0 auto;margin-top: 30px;}
+.fenye{text-align: center;height: 30px;margin: 0 auto;}
+.fenye li{float: left;border:1px solid #6CBFB7;height: 26px;line-height: 26px;margin-right: 10px;}
+.fenye li:hover{background-color: #f1f1f1;}
+.fenye li a{text-decoration: none;color:#6CBFB7; display: block; }
+.prev{width: 66px;}
+.next{width: 66px;}
+.numb{width: 26px;}
+.choose{border:1px solid #357973!important;}
+.choose a{color: #357973!important;}
+
+
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+/*蓝色按钮,绝对定位*/
+.blueButton
+{
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 40px;
+	background-color: #00b3ee;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	font:normal normal normal 16px/40px 'Microsoft YaHei';
+	cursor: pointer;
+	border-radius: 4px;
+}
+.blueButton:hover
+{
+	text-decoration: none;
+}
+/*自定义上传,位置大小都和a完全一样,而且完全透明*/
+.myFileUpload
+{
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 40px;
+	opacity: 0;
+}
+/*显示上传文件夹名的Div*/
+.show
+{
+	position: absolute;
+	top:40px;
+	width: 100%;
+	height: 30px;
+	font:normal normal normal 14px/30px 'Microsoft YaHei';
+}
+
+a,img{border:0;}
+body{background:#333;color:#eee;font-family:microsoft yahei;}
+
+/* content */
+div#content{width:700px;margin:40px auto 0 auto;}
+div#content ul#itemContainer li{display:inline-block;margin:5px;zoom:1;*display:inline;}
+div#content ul#itemContainer ll li img{vertical-align:bottom;width:125px;height:125px;}
+.holder{margin:15px 0;text-align:center;}
+.holder a{font-size:12px;cursor:pointer;margin:0 5px;color:#fff;padding:2px 5px;}
+.holder a:hover{background-color:#eee;color:#FF4242;}
+.holder a.jp-previous{margin-right:15px;}
+.holder a.jp-next{margin-left:15px;}
+.holder a.jp-current, a.jp-current:hover{color:#FF4242;font-weight:bold;}
+.holder a.jp-disabled, a.jp-disabled:hover{color:#eee;}
+.holder a.jp-current, a.jp-current:hover,.holder a.jp-disabled, a.jp-disabled:hover{cursor:default;background:none;}
+.holder span{margin:0 5px;}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="static/assets/images/favicon.png">
+    <title>银行卡号识别系统</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="static/lite/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="static/lite/css/colors/blue.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="static/lite/css/pagePicstyle.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+    <![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <!-- Logo icon --><b>
+                    <img src="static/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                </b>
+                    <!--End Logo icon -->
+
+                    <!-- Light Logo text -->
+                    <img src="static/assets/images/title.png" height="40" width="180" class="light-logo" alt="homepage" /></a>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li> <a class="waves-effect" href="/" aria-expanded="false"><i class="mdi"></i><span class="hide-menu">首页</span></a>
+                    </li>
+                    <li> <a class="waves-effect" href="recognition" aria-expanded="false"><i class="mdi"></i><span class="hide-menu">单张银行卡号识别</span></a>
+                    </li>
+                    <li> <a class="waves-effect" href="augment" aria-expanded="false"><i class="mdi"></i><span class="hide-menu">银行卡预处理</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+        <!-- Bottom points-->
+        <div class="sidebar-footer">
+            <!-- item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+            <!-- item--><a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+            <!-- item--><a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a> </div>
+        <!-- End Bottom points-->
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="row page-titles">
+                <div class="col-md-5 col-8 align-self-center">
+                    <h3 class="text-themecolor m-b-0 m-t-0">数据增强</h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">主页</a></li>
+                        <li class="breadcrumb-item active">数据增强</li>
+                    </ol>
+                </div>
+                <div class="col-md-7 col-4 align-self-center">
+                    <a href="#" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> 使用说明</a>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <!-- Row -->
+            <div class="row">
+
+                <div class="col-lg-4 col-xlg-3 col-md-5">
+                    <div class="card">
+                        <div class="card-block">
+                        <div class="container">
+                            <div class="text-center" id='face-empty-result'>
+                                <img src="static/assets/images/myPic/card.jpg" height="200" width="300" alt="" id="img_driver">
+                            </div>
+                            <img style='width: 100%' id='face-result'/>
+                        </div>
+                        </br>
+                        <div class="row text-center justify-content-md-center">
+                            <div class="col-md-5" id='drop'>
+                                <input type="file" style="display:None" id="inputPic" accept="image/jpg, image/png, image/jpeg" onChange="preview(this,'img_driver');">
+                                <button type="button" class="btn btn-success" onclick="pictureUpload();">上传照片</button>
+                            </div>
+                            <div class="col-md-5">
+                                <button class="btn btn-success" onclick="upload();">数据增强</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class="col-lg-8 col-xlg-9 col-xs-7">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="piclist">
+                                <ul class="listul"></ul>
+                                <div class="fydiv">
+                                    <ul class="fenye"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+        </div>
+        <!-- Row -->
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+    </div>
+
+</div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
+</div>
+
+<script src="static/assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="static/assets/plugins/bootstrap/js/tether.min.js"></script>
+<script src="static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="static/lite/js/jquery.slimscroll.js"></script>
+<!--Wave Effects -->
+<script src="static/lite/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="static/lite/js/sidebarmenu.js"></script>
+<!--stickey kit -->
+<script src="static/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<!--Custom JavaScript -->
+<script src="static/lite/js/custom.min.js"></script>
+<script type="text/javascript" src="static/js/imageAugment.js"></script>
+</html>
+
+
+
+
+
+
+
