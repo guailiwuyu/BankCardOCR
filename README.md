@@ -49,6 +49,7 @@ flask      	    1.0.3
 pip install tensorflow-gpu -i https://pypi.doubanio.com/simple/ 
 
 3.运行步骤
+
 运行项目时，可以在当前目录，即 demo 文件夹下用 cmd 命令行或 powershell 命令行运行 python demo.py。
 程序自动读取 test_images 的图片进行卡号定位和识别， 框出的定位结果保存在test_result 文件夹下，识别的卡号结果保存在 test_result/result.txt 文件里，test_result2 文件夹存放卡号截取的图片，用于卡号识别读取。
 
