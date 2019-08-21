@@ -9,25 +9,40 @@ windows10 系统；
 二、开发工具和软件介绍
 
 1.pyCharm; 
+
 2.python3.5;
+
 3.tensorflow1.13.1 / tensorflow-gpu1.13.1,cuDNN7.4,CUDA10.0;
+
 4.Jupyter Notebook;
+
 5.WebStorm
 
 
 三、运行环境配置：
 
 1.安装 python3.5 及以上版本，并配置系统环境变量，使得可以通过 pip 命令安装三方库，使得可以通过 cmd 命令行执行 python 命令；
+
 2.pip 命令安装 python 三方库插件：
+
 tensorflow   1.13.1 或者 tensorflow-gpu （ 1.13.1 ）、 cuDNN （ 7.4 ）、 CUDA （ 10.0 ）
+
 matplotlib    3.0.3
+
 easydict	  1.9
+
 pyyaml	5.1
+
 opencv_python 4.0.0.21
+
 scipy	    1.2.1
+
 pillow	    6.0.0
+
 numpy	    1.16.1
+
 imageio	    2.5.0
+
 flask      	    1.0.3
 
 可以通过豆瓣镜像网站加速安装下载三方库，例如安装 tensorflow-gpu 示例：
