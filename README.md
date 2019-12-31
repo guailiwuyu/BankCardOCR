@@ -1,5 +1,5 @@
 # BankCardOCR
-A bank cardnumber recognition system based on deep learning algorithm.
+基于CTPN和CRNN实现的银行卡号识别系统。
 
 一、开发和运行系统
 
