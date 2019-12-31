@@ -45,8 +45,7 @@ imageio	    2.5.0
 
 flask      	    1.0.3
 
-可以通过豆瓣镜像网站加速安装下载三方库，例如安装 tensorflow-gpu 示例：
-pip install tensorflow-gpu -i https://pypi.doubanio.com/simple/ 
+可以通过豆瓣镜像网站加速安装下载三方库，例如安装 tensorflow-gpu 示例： pip install tensorflow-gpu -i https://pypi.doubanio.com/simple/ 
 
 # 四、运行步骤
 
