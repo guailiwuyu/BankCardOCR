@@ -54,4 +54,7 @@ flask      	    1.0.3
 
 单张识别： 执行GUI/_init_.py,进入交互网页，选择图片进行定位和卡号识别。
 
-附：卡号定位的模型保存在 card_number_detection/checkpoints 文件夹里， 卡号识别的模型保存在 card_number_recognition/save 文件夹里
+附：卡号定位的模型保存在 card_number_detection/checkpoints 文件夹里， 
+    卡号识别的模型保存在 card_number_recognition/save 文件夹里,
+    使用的银行卡号数据集下载链接: https://pan.baidu.com/s/1DG67U-l2_8W9kzcUiB24OA 提取码: a778
+
